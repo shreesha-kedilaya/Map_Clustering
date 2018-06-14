@@ -12,6 +12,7 @@
 		111541FA20D1034C005A93BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111541F820D1034C005A93BB /* Main.storyboard */; };
 		111541FC20D1034E005A93BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111541FB20D1034E005A93BB /* Assets.xcassets */; };
 		111541FF20D1034E005A93BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111541FD20D1034E005A93BB /* LaunchScreen.storyboard */; };
+		1115420820D117DD005A93BB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1115420720D117DD005A93BB /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		111541FB20D1034E005A93BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		111541FE20D1034E005A93BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1115420020D1034E005A93BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1115420720D117DD005A93BB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1115420820D117DD005A93BB /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				111541F320D1034C005A93BB /* Cluster */,
 				111541F220D1034C005A93BB /* Products */,
+				1115420620D117DD005A93BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				1115420020D1034E005A93BB /* Info.plist */,
 			);
 			path = Cluster;
+			sourceTree = "<group>";
+		};
+		1115420620D117DD005A93BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1115420720D117DD005A93BB /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +108,11 @@
 				TargetAttributes = {
 					111541F020D1034C005A93BB = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -280,14 +297,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 849UP4BSN8;
 				INFOPLIST_FILE = Cluster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = YMl.Cluster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a867b59b-25b7-481f-a784-05caabb37335";
+				PROVISIONING_PROFILE_SPECIFIER = "IndiaDev*";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -297,14 +318,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 849UP4BSN8;
 				INFOPLIST_FILE = Cluster/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = YMl.Cluster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a867b59b-25b7-481f-a784-05caabb37335";
+				PROVISIONING_PROFILE_SPECIFIER = "IndiaDev*";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
