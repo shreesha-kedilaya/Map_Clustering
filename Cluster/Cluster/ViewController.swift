@@ -48,9 +48,9 @@ extension ViewController: MKMapViewDelegate {
         mkMapView.setRegion(mkMapView.regionThatFits(region), animated: true)
     }
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
-    }
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        
+//    }
     
     
 }
