@@ -21,19 +21,19 @@ class ViewController: UIViewController {
         checkLocationAuthorizationStatus()
         mkMapView.delegate = self
         
-        let center = CLLocationCoordinate2D(latitude: 12.971, longitude: 77.59)
-        let delta = 1.1
+        let center = CLLocationCoordinate2D(latitude: 37.787994, longitude: -122.407437) // region center
+        let delta = 0.1 // region span
         
-        let annotations: [Annotation] = (0..<100).map { _ in
+        // Add annotations to the manager.
+        let annotations: [Annotation] = (0..<100000).map { _ in
             let annotation = Annotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: center.latitude + drand48() * delta - delta / 2, longitude: center.longitude + drand48() * delta - delta / 2)
             let color = UIColor(red: 255/255, green: 149/255, blue: 0/255, alpha: 1)
-            annotation.style = .simple(color: color, radius: 25)
+//            annotation.style = .color(color, radius: 25)
             // or
             // annotation.style = .image(UIImage(named: "pin")?.filled(with: color)) // custom image
             return annotation
         }
-        
         
 //        mkMapView.register(AnnotationView.self, forAnnotationViewWithReuseIdentifier: "AnnotationView")
         

@@ -145,7 +145,7 @@ extension QuadTreeNode: QuadTreeAcceptable {
         
         var result = [MKAnnotation]()
         
-        for point in points where positionRect.contains(point.coordinate) {
+        for point in points where rect.contains(point.coordinate) {
             result.append(point)
         }
         
