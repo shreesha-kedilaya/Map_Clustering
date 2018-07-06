@@ -13,7 +13,12 @@
 		111541FC20D1034E005A93BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111541FB20D1034E005A93BB /* Assets.xcassets */; };
 		111541FF20D1034E005A93BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111541FD20D1034E005A93BB /* LaunchScreen.storyboard */; };
 		1115420820D117DD005A93BB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1115420720D117DD005A93BB /* MapKit.framework */; };
-		111ADC5420DB8FF60076DD90 /* QuadTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111ADC5320DB8FF60076DD90 /* QuadTree.swift */; };
+		11186E0A20EE321E00F685C9 /* Cluster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11186E0920EE321E00F685C9 /* Cluster.swift */; };
+		11186E0C20EE340700F685C9 /* ClusterMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11186E0B20EE340700F685C9 /* ClusterMapView.swift */; };
+		11186E0E20EF4B7600F685C9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11186E0D20EF4B7600F685C9 /* Extensions.swift */; };
+		111ADC5420DB8FF60076DD90 /* MapQuadTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111ADC5320DB8FF60076DD90 /* MapQuadTree.swift */; };
+		111ADC5620DBC72E0076DD90 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111ADC5520DBC72E0076DD90 /* Annotation.swift */; };
+		111ADC5820DBC7360076DD90 /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111ADC5720DBC7360076DD90 /* ClusterAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +30,12 @@
 		111541FE20D1034E005A93BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1115420020D1034E005A93BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1115420720D117DD005A93BB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		111ADC5320DB8FF60076DD90 /* QuadTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadTree.swift; sourceTree = "<group>"; };
+		11186E0920EE321E00F685C9 /* Cluster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cluster.swift; sourceTree = "<group>"; };
+		11186E0B20EE340700F685C9 /* ClusterMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterMapView.swift; sourceTree = "<group>"; };
+		11186E0D20EF4B7600F685C9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		111ADC5320DB8FF60076DD90 /* MapQuadTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapQuadTree.swift; sourceTree = "<group>"; };
+		111ADC5520DBC72E0076DD90 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		111ADC5720DBC7360076DD90 /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +72,12 @@
 			children = (
 				111541F420D1034C005A93BB /* AppDelegate.swift */,
 				111541F620D1034C005A93BB /* ViewController.swift */,
-				111ADC5320DB8FF60076DD90 /* QuadTree.swift */,
+				111ADC5520DBC72E0076DD90 /* Annotation.swift */,
+				111ADC5720DBC7360076DD90 /* ClusterAnnotationView.swift */,
+				111ADC5320DB8FF60076DD90 /* MapQuadTree.swift */,
+				11186E0D20EF4B7600F685C9 /* Extensions.swift */,
+				11186E0920EE321E00F685C9 /* Cluster.swift */,
+				11186E0B20EE340700F685C9 /* ClusterMapView.swift */,
 				111541F820D1034C005A93BB /* Main.storyboard */,
 				111541FB20D1034E005A93BB /* Assets.xcassets */,
 				111541FD20D1034E005A93BB /* LaunchScreen.storyboard */,
@@ -155,8 +170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				111ADC5420DB8FF60076DD90 /* QuadTree.swift in Sources */,
+				11186E0C20EE340700F685C9 /* ClusterMapView.swift in Sources */,
+				111ADC5420DB8FF60076DD90 /* MapQuadTree.swift in Sources */,
 				111541F720D1034C005A93BB /* ViewController.swift in Sources */,
+				11186E0E20EF4B7600F685C9 /* Extensions.swift in Sources */,
+				11186E0A20EE321E00F685C9 /* Cluster.swift in Sources */,
+				111ADC5820DBC7360076DD90 /* ClusterAnnotationView.swift in Sources */,
+				111ADC5620DBC72E0076DD90 /* Annotation.swift in Sources */,
 				111541F520D1034C005A93BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +324,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 849UP4BSN8;
 				INFOPLIST_FILE = Cluster/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,7 +345,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 849UP4BSN8;
 				INFOPLIST_FILE = Cluster/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

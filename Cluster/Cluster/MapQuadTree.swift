@@ -13,13 +13,13 @@ import CoreLocation
 
 let maxNumberOfPoints = 4
 
-protocol QuadTreeAcceptance {
+protocol QuadTreeAcceptable {
     func add(annotation: MKAnnotation) -> Bool
     func annotations(in rect: MKMapRect) -> [MKAnnotation]
     func remove(_ annotation: MKAnnotation) -> Bool
 }
 
-class QuadTree: QuadTreeAcceptance {
+class MapQuadTree: QuadTreeAcceptable {
     let root: QuadTreeNode
     
     init(rect: MKMapRect) {
@@ -95,7 +95,7 @@ class QuadTreeNode {
     }
 }
 
-extension QuadTreeNode: QuadTreeAcceptance {
+extension QuadTreeNode: QuadTreeAcceptable {
     
     @discardableResult
     func add(annotation: MKAnnotation) -> Bool {
