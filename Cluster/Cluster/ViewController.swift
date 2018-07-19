@@ -80,8 +80,10 @@ extension ViewController: MKMapViewDelegate {
             var view = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             if let view = view as? ClusterAnnotationView {
                 view.annotation = annotation
+                view.reload()
             } else {
                 view = ClusterAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                (view as? ClusterAnnotationView)?.reload()
             }
             return view
         } else {

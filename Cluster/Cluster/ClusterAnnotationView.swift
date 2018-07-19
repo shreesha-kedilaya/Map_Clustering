@@ -18,6 +18,7 @@ class ClusterAnnotationView: MKAnnotationView {
         frame = CGRect(origin: frame.origin, size: CGSize(width: 40, height: 40))
         countLabel.text = "20"
         countLabel.textAlignment = .center
+        countLabel.font = UIFont.systemFont(ofSize: 12)
         addSubview(countLabel)
     }
     
@@ -29,9 +30,12 @@ class ClusterAnnotationView: MKAnnotationView {
         super.layoutSubviews()
         layer.cornerRadius = 20
         countLabel.frame = bounds
+    }
+    
+    func reload() {
         let annotationClass = annotation as? ClusterAnnotation
         let count = annotationClass?.members?.count ?? 0
-        
+        countLabel.textColor = .white
         countLabel.text = "\(count)"
     }
 }

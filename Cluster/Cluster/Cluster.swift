@@ -94,8 +94,8 @@ class Cluster {
         
         print(toAdd)
         
-//        let nonRemoving = toRemove.filter { !visibleRect.contains($0.coordinate) }
-//        toRemove.subtract(nonRemoving)
+        let nonRemoving = toRemove.filter { !visibleRect.contains($0.coordinate) }
+        toRemove.subtract(nonRemoving)
         
         displayedAnnotations.subtract(toRemove)
         displayedAnnotations.add(toAdd)
